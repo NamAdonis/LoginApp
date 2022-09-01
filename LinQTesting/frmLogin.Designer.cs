@@ -33,13 +33,12 @@
             this.t_Password = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.b_Connect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // b_Login
             // 
             this.b_Login.Enabled = false;
-            this.b_Login.Location = new System.Drawing.Point(472, 259);
+            this.b_Login.Location = new System.Drawing.Point(392, 254);
             this.b_Login.Name = "b_Login";
             this.b_Login.Size = new System.Drawing.Size(111, 68);
             this.b_Login.TabIndex = 0;
@@ -79,22 +78,11 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Password";
             // 
-            // b_Connect
-            // 
-            this.b_Connect.Location = new System.Drawing.Point(315, 259);
-            this.b_Connect.Name = "b_Connect";
-            this.b_Connect.Size = new System.Drawing.Size(107, 68);
-            this.b_Connect.TabIndex = 5;
-            this.b_Connect.Text = "Connect";
-            this.b_Connect.UseVisualStyleBackColor = true;
-            this.b_Connect.Click += new System.EventHandler(this.b_Connect_Click);
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.b_Connect);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.t_Password);
@@ -102,6 +90,7 @@
             this.Controls.Add(this.b_Login);
             this.Name = "frmLogin";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,7 +103,6 @@
         private System.Windows.Forms.TextBox t_Password;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button b_Connect;
     }
 }
 

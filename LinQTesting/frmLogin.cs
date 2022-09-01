@@ -13,13 +13,13 @@ namespace LinQTesting
 {
     public partial class frmLogin : Form
     {
+        private string ConnectionString;
+        private SqlConnection cnn;
         public frmLogin()
         {
             InitializeComponent();
         }
-        private string ConnectionString;
-        private SqlConnection cnn;
-        private void b_Connect_Click(object sender, EventArgs e)
+        private void frmLogin_Load(object sender, EventArgs e)
         {
             try
             {
@@ -27,15 +27,13 @@ namespace LinQTesting
                 cnn = new SqlConnection(ConnectionString);
                 cnn.Open();
                 b_Login.Enabled = true;
-                b_Connect.Enabled = false;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Cannot connect to sever! Try Again");
+                this.Close();
             }
-
         }
-        
         private void b_Login_Click(object sender, EventArgs e)
         {
             if(t_Password.Text != "" && t_UserName.Text != "")
